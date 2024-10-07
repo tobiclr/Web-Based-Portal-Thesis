@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Pembo',     11],
+          ['Comembo',      2],
+          ['East Rembo',  2],
+          ['West Rembo', 2],
+          ['Rizal',    7]
+        ]);
+
+        var options = {
+          title: 'Tally of Embo Barangay Applicants'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  
+</head>
+<body>
+ 
+ 
+  <div class="sidenav">
+    <a href="admin.html"><i class='bx bx-home-alt-2'></i>Home</a>
+    <a href="approved.html"><i class='bx bxs-user-check'></i>Approved Application</a>
+    <a href="pending.html"><i class='bx bxs-user-account'></i>Pending Application</a>
+  </div>
+  
+  <div class="main">
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+
+
+
+
+
+
+  </div>
+  
+  
+  
+  
+</body>
+</html>

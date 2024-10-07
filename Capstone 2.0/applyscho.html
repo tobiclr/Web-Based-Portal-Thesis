@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="studentdashboard.css">
+    <link rel="stylesheet" href="applyscho.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+</head>
+<body>
+    
+  <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+            <div class="header_text"><h6> Dashboard / Scholarship</h6></div>
+            <div class="header_img"> <img src="" alt=""> </div>
+        </header>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Welcome</span> </a>
+                    
+                    <div class="nav_list"> <a href="studentdashboard.html" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
+                       
+                        <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name"> Apply Scholarship </span> </a> <a href="scholarstatus.html" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name"> Scholarship Status </span> </a>    
+                     </div>
+                
+                    </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+            </nav>
+        </div>
+       
+        
+        <div class="container">
+          <header>APPLY FOR SCHOLARSHIP</header>
+  
+          <button class="cancelBtn" onclick="logout()">
+              <span class="btnText">Cancel</span>
+          </button>
+          <form method="get" action="admin.html">
+              <div class="form first">
+                  <div class="details personal">
+                      <span class="title">Personal Details</span>
+  
+                      
+                      <div class="fields">
+                          <div class="input-field">
+                              <label>Applicant Status</label>
+                              <select id="Status" name="Status" required>
+                                  <option disabled selected value="gen">Status</option>
+                                  <option value="New Applicant">New Applicant</option>
+                                  <option value="Renewing Scholarship">Renewing Scholarship</option>
+                              </select>
+                          </div>
+                          
+                          <div class="input-field">
+                              <label>Type of Scholarship</label>
+                              <select id="ScholarshipType" name="ScholarshipType" required>
+                                  <option disabled selected value="gen">Scholarship Applied for</option>
+                                  <option value="Basic Scholarship">Basic Scholarship</option>
+                                  <option value="Basic Plus Scholarship">Basic Plus Scholarship</option>
+                                  <option value="SUCs-LCUs Scholarship">SUCs-LCUs Scholarship</option>
+                              </select>
+                          </div>
+                          
+                          <div class="input-field">
+                              <label>Full Name</label>
+                              <input type="text" id="Fullname" name="Fullname" placeholder="Enter your name" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Home Address</label>
+                              <input type="text" id="Home" name="Home" placeholder="Home Address" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Barangay</label>
+                              <select id="Barangay" name="Barangay" required>
+                                  <option disabled selected value="brg">Barangay</option>
+                                  <option value="Katuparan">Pembo</option>
+                                  <option value="Pinagsama">Comembo</option>
+                                  <option value="Pinagsama">West Rembo</option>
+                                  <option value="Pinagsama">East Rembo</option>
+                                  <option value="Pinagsama">Rizal</option>
+                                  <option value="Pinagsama">Pitogo</option>
+                                  </select>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Email</label>
+                              <input type="text" id="EmailAdd" name="EmailAdd" placeholder="Email Address" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Mobile Number</label>
+                              <input type="text" id="Mobile" name="Moile" placeholder="Mobile number" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Telephone Number</label>
+                              <input type="text" id="Telephone" name="Telephone" placeholder="Telephone number" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Age</label>
+                              <input type="number" name="Age" id="Age" placeholder="Age" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Date of Birth</label>
+                              <input type="date" name="Birth" id="Birth" placeholder="Birth date" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Place of Birth</label>
+                              <input type="text" id="Place" name="Place" placeholder="Place of Birth" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Years of Residency</label>
+                              <input type="number" id="YOR" name="YOR" placeholder="Years of Residency in Taguig" required>
+                          </div>
+  
+                          <div class="input-field" id="Gender" name="Gender">
+                              <label>Gender</label>
+                              <select required>
+                                  <option disabled selected>Select gender</option>
+                                  <option>Male</option>
+                                  <option>Female</option>
+                              </select>
+                          </div>
+  
+                          
+                          <div class="input-field" id="Marital" name="Marital">
+                              <label>Marital Status</label>
+                              <select required>
+                                  <option disabled selected>Marital Status</option>
+                                  <option>Single</option>
+                                  <option>Married</option>
+                              </select>
+                          </div>
+  
+                          <div class="input-field" id="Citizenship" name="Citizenship">
+                              <label>Citizenship</label>
+                              <input type="text" placeholder="Citizenship" required>
+                          </div>
+                      </div>
+  
+                      <button class="nextBtn">
+                          <span class="btnText">Next</span>
+                          <i class="uil uil-navigator"></i>
+                      </button>
+                      
+                  </div> 
+              </div>
+
+
+             
+              <div class="form second">
+                  <div class="details address">
+                      <span class="title">Family Background</span>
+  
+                      <div class="fields">
+                          <div class="input-field" id="Religion" name="Religion">
+                              <label>Father Name</label>
+                              <input type="text" placeholder="Name" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Home Address [Father]</label>
+                              <input type="text" placeholder="Name" required>
+                          </div>
+  
+                          <div class="input-field">
+                            <label>Contact No.</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+  
+                          <div class="input-field">
+                            <label>Present Occupation</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+  
+                          <div class="input-field">
+                            <label>Age</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+  
+                          <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+                          
+                          <div class="input-field">
+                            <label>Citizenship</label>
+                            <input type="text" placeholder="Name" required>
+                              
+                          </div>
+  
+                          
+  
+                          <div class="input-field">
+                            <label>Mother Name</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+  
+                          <div class="input-field">
+                            <label>Home Address</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+                          
+                          <div class="input-field">
+                            <label>Contact No.</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+                                
+                          <div class="input-field">
+                            <label>Present Occupation</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+
+                          <div class="input-field">
+                            <label>Age</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+
+                          <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+                         
+                          <div class="input-field">
+                            <label>Citizenship</label>
+                            <input type="text" placeholder="Name" required>
+                          </div>
+
+
+ 
+                        </div>
+                  </div>
+                      
+  
+                  <div class="details family">
+                      <span class="title"></span>
+  
+                    
+  
+                      <div class="buttons">
+                          <div class="backBtn">
+                              <i class="uil uil-navigator"></i>
+                              <span class="btnText">Previous</span>
+                          </div>
+                          
+                          <button id="sbmt" type="submit" class="submit" >
+                              <span class="btnText">Submit</span>
+                              <i class="uil uil-navigator"></i>
+                          </button>
+                          
+                      </div>
+                  </div> 
+              </div>
+          </form>
+          
+      </div>
+           
+    
+         
+    
+        <script src="studentdashboard.js"></script>
+        <script src="applyscho.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script> </script>
+    
+</body>
+</html>
